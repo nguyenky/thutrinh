@@ -1,0 +1,15 @@
+.xs{
+	/*display: flex;*/
+	padding: 10px;
+}
+.sidebar-date-xs{
+	float: left;
+	padding: 10px;
+}
+.contents-xs{
+	float: left;
+}
+.btn-xoso{
+	margin-bottom: 10px;
+	display: block;
+}
