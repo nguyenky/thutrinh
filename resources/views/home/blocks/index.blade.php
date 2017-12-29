@@ -5,14 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  
-  <!-- <link href="plugins/bootstraps/css/bootstrap.min.css" rel="stylesheet"> -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
   <link href="css/simple-sidebar.css" rel="stylesheet">
-  <link href="css/kqxs.css" rel="stylesheet">
+  @yield('css')
 </head>
-<body>
+<body ng-app="myApp">
 
 	<nav class="navbar navbar-inverse">
 	  <div class="container-fluid">
@@ -32,32 +28,16 @@
 	</nav>
 	<div class="container-fluid">
 		@yield('content')
-		<!-- <div class="col-md-12">
-			<div class="col-md-2">
-				<div class="btn-xoso">
-					<button type="button" class="btn btn-primary btn-lg ">Large button</button>
-				</div>
-				<div class="btn-xoso">
-					<button type="button" class="btn btn-primary btn-lg ">Large button</button>
-				</div>
-				<div class="btn-xoso">
-					<button type="button" class="btn btn-primary btn-lg ">Large button</button>
-				</div>
-				<div class="btn-xoso">
-					<button type="button" class="btn btn-primary btn-lg ">Large button</button>
-				</div>
-				<div class="btn-xoso">
-					<button type="button" class="btn btn-primary btn-lg ">Large button</button>
-				</div>
-			</div>
-			<div class="col-md-10">
-				dsds
-			</div>
-		</div> -->
 	</div>
 </body>
 <footer>
 	<script src="plugins/jquery/jquery.min.js"></script>
     <script src="plugins/bootstraps/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="plugins/underscorejs/underscore.js"></script>
+    <!-- <script src="plugins/underscorejs/underscore-modules.js"></script> -->
+    <script src="angularjs/angularjs.js"></script>
+
+    @yield('angularjs')
 </footer>
 </html>

@@ -11,5 +11,8 @@ class Kqxs extends Model
     protected $fillable = [
         'day',
     ];
+    public function chanel(){
+    	return $this->hasMany(\App\Chanel::class);
+    }
 
 }

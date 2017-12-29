@@ -13,6 +13,24 @@
 	margin-bottom: 10px;
 	display: block;
 }
-.sidebar-xs{
-	
+.chanel{
+	/*border: 1px solid;*/
+	/*border-radius: 5px; */
+}
+.chanel .chanel-header{
+	border-bottom: 3px solid;
+	padding: 5px;
+	font-size: 20px;
+
+}
+.chanel .chanel-body{
+	padding-top: 5px;
+}
+.chanel .chanel-body .value{
+	display: inherit;
+}
+.chanel .chanel-body input{
+	width: 100px;
+	border: none;
+	/*border-bottom: 1px solid;*/
 }
