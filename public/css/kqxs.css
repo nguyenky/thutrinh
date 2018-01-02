@@ -13,6 +13,9 @@
 	margin-bottom: 10px;
 	display: block;
 }
+.btn-xoso button:focus{
+	background: #d23607 !important;
+}
 .chanel{
 	/*border: 1px solid;*/
 	/*border-radius: 5px; */
@@ -34,3 +37,7 @@
 	border: none;
 	/*border-bottom: 1px solid;*/
 }
+/*.btn-active{
+	    background: #d23607 !important;
+}*/
+

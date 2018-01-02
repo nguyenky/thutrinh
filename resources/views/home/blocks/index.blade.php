@@ -17,7 +17,7 @@
 	    </div>
 	    <ul class="nav navbar-nav">
 	      <li class="active"><a href="">Kết quả sổ xố</a></li>
-	      <li><a href="#">Page 1</a></li>
+	      <li><a href="/sosach">Sổ sách</a></li>
 	      <li><a href="#">Page 2</a></li>
 	    </ul>
 	    <ul class="nav navbar-nav navbar-right">

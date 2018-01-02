@@ -146,9 +146,26 @@ class HomeController extends BaseController
         return $this->responseSuccess('Kqxs successfully',$kqxs);
     }
 
+
     public function updateValue($id, Request $request){
         $input = $request->all();
-        return $this->responseSuccess('Kqxs successfully',$input);
+        $chanel = Chanel::find($id);
+        foreach ($input as $key => $values) {
+            if(count($values)){
+                foreach ($values as $value) {
+                    if($value){
+                        $chanel->chanel_value()->create([
+                            'giai' => $key,
+                            'value' => intval($value['value']),
+                            'chanel_id'=> $id,
+                        ]);
+                    }
+                    
+                }
+            }
+            
+        }
+        $this->apiGetChanel($id);
     }
 
 }

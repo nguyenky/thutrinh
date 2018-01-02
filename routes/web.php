@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/kqxs', 'HomeController@kqxs')->name('kqxs');
+Route::get('/sosach', 'HomeController@kqxs')->name('kqxs');
 Route::get('/apiGetChanel/{id}','HomeController@apiGetChanel')->name('kqxs');
 Route::post('/updateValue/{id}','HomeController@updateValue')->name('kqxs');
 Route::get('/test/{id}','HomeController@test')->name('kqxs');
