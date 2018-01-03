@@ -307,6 +307,7 @@ class ComposerStaticInit3eeecec82e1f55f4817c84531ff2e767
 
     public static $classMap = array (
         'App\\Chanel' => __DIR__ . '/../..' . '/app/Chanel.php',
+        'App\\ChanelValue' => __DIR__ . '/../..' . '/app/ChanelValue.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -316,12 +317,14 @@ class ComposerStaticInit3eeecec82e1f55f4817c84531ff2e767
         'App\\Http\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/Http/Controllers/BaseController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\admin\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/admin/DashboardController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Middleware\\admin\\AdminMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/admin/AdminMiddleware.php',
         'App\\Kqxs' => __DIR__ . '/../..' . '/app/Kqxs.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',

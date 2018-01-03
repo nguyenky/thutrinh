@@ -1,6 +1,6 @@
 
 app.controller('KqxsCtrl',['$scope','$http','_',function($scope,$http,_){
-	$scope.name =null;
+	$scope.name ='uchiha';
 	$scope.loading = true;
 	$scope.init = true;
 	$scope.active = null;
