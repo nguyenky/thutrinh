@@ -47,6 +47,10 @@ Route::group(['namespace'=>'admin','prefix' => 'admin','middleware'=>'admin'],fu
 
 	Route::get('ket-qua-so-so','LotteryResultsController@index')->name('admin.lottery_results');
 
+	Route::get('/apiGetChanel/{id}','LotteryResultsController@apiGetChanel')->name('admin.get_chanel');
+
+	Route::post('/updateValue/{id}','LotteryResultsController@updateValue')->name('admin.update_value');
+
 });
 
 Route::get('test',function(){

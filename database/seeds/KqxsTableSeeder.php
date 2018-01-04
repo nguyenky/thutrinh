@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Kqxs;
+use App\Date;
 use Carbon\Carbon;
 
 class KqxsTableSeeder extends Seeder
@@ -22,7 +22,7 @@ class KqxsTableSeeder extends Seeder
         }
         foreach ($weekdays as $key => $weekday) {
 
-        	Kqxs::create([
+        	Date::create([
         		'day' => $weekday
         	]);
         }

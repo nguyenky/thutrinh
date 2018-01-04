@@ -12,7 +12,7 @@ app.controller('KqxsCtrl',['$scope','$http','_',function($scope,$http,_){
 		$scope.loading = true;
 		$http({
 		  method: 'GET', 
-		  url: '/apiGetChanel/'+id,
+		  url: '/admin/apiGetChanel/'+id,
 		}).then(function successCallback(response) {
 			$scope.chanels = response.data.data.chanel;
 			if($scope.chanels.length == 3){
@@ -95,7 +95,7 @@ app.controller('KqxsCtrl',['$scope','$http','_',function($scope,$http,_){
 			console.log(data);
 			$http({
 				  method: 'POST',
-				  url: '/updateValue/'+id,
+				  url: '/admin/updateValue/'+id,
 				data: data,
 				}).then(function successCallback(response) {
 				    $scope.loading = false;

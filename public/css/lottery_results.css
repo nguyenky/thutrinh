@@ -1,0 +1,25 @@
+.date{
+	cursor: pointer;
+}
+.date:hover{
+	background-color: #796AEE !important;
+}
+.date:focus{
+	background-color: #796AEE !important;
+}
+.chanel{
+	display: 	flex;
+	flex-direction: column;
+}
+.chanel-header{
+	display: 	block;
+	padding: 	10px;
+}
+.chanel .chanel-body input{
+	width: 100px;
+	border: none;
+	/*border-bottom: 1px solid;*/
+}
+.chanel-btn{
+	padding: 10px;
+}
