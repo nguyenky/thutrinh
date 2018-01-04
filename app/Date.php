@@ -14,4 +14,7 @@ class Date extends Model
     public function chanel(){
     	return $this->hasMany(\App\Chanel::class);
     }
+    public function date_customer(){
+    	return $this->hasMany(\App\DateCustomer::class);
+    }
 }

@@ -43,13 +43,34 @@ Route::group(['namespace'=>'Login'],function(){
 
 Route::group(['namespace'=>'admin','prefix' => 'admin','middleware'=>'admin'],function(){
 
+	/*----------  Trang chủ  ----------*/
+	
+
 	Route::get('trang-chu','DashboardController@index')->name('admin.index');
+
+	/*----------  Kết quả xổ số  ----------*/
+	
 
 	Route::get('ket-qua-so-so','LotteryResultsController@index')->name('admin.lottery_results');
 
-	Route::get('/apiGetChanel/{id}','LotteryResultsController@apiGetChanel')->name('admin.get_chanel');
+	/*--  API  -*/ Route::get('/apiGetChanel/{id}','LotteryResultsController@apiGetChanel')->name('admin.get_chanel');
 
 	Route::post('/updateValue/{id}','LotteryResultsController@updateValue')->name('admin.update_value');
+
+	/*----------  Số  ----------*/
+
+	Route::get('so','NumberController@index')->name('admin.number');
+
+	Route::get('so/{id}','NumberController@detail')->name('admin.number_detail');
+
+	/*--  API  -*/ Route::get('/getNumber/{id}','NumberController@getNumber')->name('admin.get_number');
+	/*--  API  -*/ Route::get('/getCustomer','CustomerController@apiGetCustomer')->name('admin.get_customer');
+
+	/*----------  Bạn hàng  ----------*/
+
+	Route::get('/ban-hang','CustomerController@index')->name('admin.customer');
+
+	
 
 });
 

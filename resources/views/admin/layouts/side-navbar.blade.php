@@ -10,6 +10,8 @@
   <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
   <ul class="list-unstyled">
             <li class="{{Session::get('active') == 'dashboard'? 'active' : ''}}"><a href="{{route('admin.index')}}"> <i class="icon-home"></i>Home </a></li>
+            <li class="{{Session::get('active') == 'number'? 'active' : ''}}"><a href="{{route('admin.number')}}"> <i class="icon-grid"></i>Số</a></li>
+            <li class="{{Session::get('active') == 'customer'? 'active' : ''}}"><a href="{{route('admin.customer')}}"> <i class="icon-grid"></i>Bạn Hàng</a></li>
             <li class="{{Session::get('active') == 'lottery_results'? 'active' : ''}}"><a href="{{route('admin.lottery_results')}}"> <i class="icon-grid"></i>Kết quả xổ số</a></li>
             <!-- <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
             <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>

@@ -1,0 +1,27 @@
+.my-checks{
+	display: flex !important;
+	flex-direction: column !important;
+	/*width: 100px;*/
+	align-items: center;
+	cursor: pointer;
+}
+.my-tds{
+	display: flex;
+	justify-content: space-around;
+}
+.my-checkbox{
+	margin-top: 5px;
+}
+.my-customer-tabs li{
+	margin-left: 5px;
+	border: 1px solid #2f333e;
+	border-radius: 3px;
+	padding: 7px;
+	cursor: pointer;
+}
+.my-customer-tabs li:hover{
+	background-color: #796AEE;
+}
+.my-customer-tabs .active{
+	background-color: #796AEE;
+}
