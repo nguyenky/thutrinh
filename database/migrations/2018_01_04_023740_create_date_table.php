@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Ketquaxoso extends Migration
+class CreateDateTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Ketquaxoso extends Migration
      */
     public function up()
     {
-        Schema::create('kqxs', function (Blueprint $table) {
+        Schema::create('date', function (Blueprint $table) {
             $table->increments('id');
             $table->dateTime('day');
             $table->timestamps();
@@ -27,6 +27,6 @@ class Ketquaxoso extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kqxs');
+        Schema::dropIfExists('date');
     }
 }

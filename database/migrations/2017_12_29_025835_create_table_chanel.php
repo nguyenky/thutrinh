@@ -16,8 +16,8 @@ class CreateTableChanel extends Migration
         Schema::create('chanels', function (Blueprint $table) {
             $table->increments('id');
             $table->dateTime('date');
-            $table->integer('kqxs_id')->unsigned();
-            $table->foreign('kqxs_id')->references('id')->on('kqxs')->onDelete('cascade');
+            $table->integer('date_id')->unsigned();
+            $table->foreign('date_id')->references('id')->on('date')->onDelete('cascade');
             $table->string('name');
             $table->string('code');
             $table->timestamps();

@@ -168,4 +168,6 @@ class HomeController extends BaseController
         $this->apiGetChanel($id);
     }
 
+    
+
 }
