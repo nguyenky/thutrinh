@@ -70,7 +70,10 @@ Route::group(['namespace'=>'admin','prefix' => 'admin','middleware'=>'admin'],fu
 
 	Route::get('/ban-hang','CustomerController@index')->name('admin.customer');
 
-	
+	/*----------  Ngày - Khách  ----------*/
+
+	/*--  API  -*/ Route::post('/createDateCustomer','NumberController@createDateCustomer')->name('admin.create_date_customer');
+	/*--  API  -*/ Route::post('/createNumber','NumberController@createNumber')->name('admin.createNumber');
 
 });
 

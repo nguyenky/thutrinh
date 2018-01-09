@@ -1,38 +1,52 @@
 
-app.controller('NumberCtrl',['$scope','$http','_',function($scope,$http,_){
+app.controller('NumberCtrl',['$scope','$http','_','$rootScope','$location',function($scope,$http,_,$rootScope,$location){
 	$scope.name ='uchiha';
-	$scope.loading = true;
+	$scope.loading_customer = false;
 	$scope.init = true;
 	$scope.active = null;
 	$scope.col = 6;
-	$scope.numbers =[];
-		$scope.getCustomer = function(){
-		// $scope.name = name;
-		// $scope.active = id;
-		// $scope.init = false;
-		// $scope.loading = true;
+	$scope.numbers ={};
+	$scope.selected = false;
+	$scope.customer = null;
+	$scope.date_customer = null;
+	// console.log(id_date);
+	// $scope.numbers = [];
+	$scope.getCustomer = function(){
+		$scope.loading_customer = false;
 		$http({
 		  method: 'GET', 
 		  url: '/admin/getCustomer'
 		}).then(function successCallback(response) {
 			$scope.customers = response.data.data;
-			// $scope.numbers = response.data.data;
-			// console.log($scope.numbers);
-			// $scope.numbers.unshift()
-			// $scope.chanels = response.data.data.chanel;
-			// if($scope.chanels.length == 3){
-			// 	$scope.col = 4;
-			// }
-			// $scope.handleValue();
-			// $scope.loading = false;
-			
+			$scope.loading_customer = true;
 		  }, function errorCallback(response) {
 			alert('er');
 		  });
 	}
 	$scope.getCustomer();
-	$scope.changeActive = function(id){
-		$scope.active = id;
+
+
+	$scope.selectCustomer = function(customer){
+		$scope.active = customer.id;
+		$scope.selected = true;
+		$scope.customer = customer;
+		var data = {
+			id_date:id_date,
+			id_customer:customer.id
+		};
+		$http({
+		  method: 'POST', 
+		  url: '/admin/createDateCustomer',
+		  data: data,
+		}).then(function successCallback(response) {
+			console.log(response.data.data);
+			$scope.date_customer = response.data.data;
+			$scope.numbers = response.data.data.numbers;
+			$scope.numbers.unshift(dataDefout);
+		  }, function errorCallback(response) {
+			alert('er');
+		  });
+		console.log($scope.customer);
 	}
 	var dataDefout = {
 		number:null,
@@ -43,28 +57,41 @@ app.controller('NumberCtrl',['$scope','$http','_',function($scope,$http,_){
 		type:null,
 
 	};
-	var dataDefout1 = {
-		number:null,
-		price:null,
-		trans:null,
-		rest:null,
-		chanel:{},
-		type:null,
-
-	};
-	// var dataDefout = 'áds';
-	$scope.numbers.unshift(dataDefout);
+	// $scope.numbers.unshift(dataDefout);
 	$scope.save = function(number){
 		console.log(number);
+		number.date_customer_id = $scope.date_customer.id;
+		number.type = 1;
 		$scope.numbers.unshift({
-			number:null,
-			price:null,
-			trans:null,
-			rest:null,
-			chanel:{},
-			type:null,
-		});
-		// console.log($scope.numbers);
+				number:null,
+				price:null,
+				trans:null,
+				rest:null,
+				chanel:{},
+				type:null,
+			});
+		$http({
+		  method: 'POST', 
+		  url: '/admin/createNumber',
+		  data: number,
+		}).then(function successCallback(response) {
+			console.log(response.data.data);
+			// $scope.date_customer = response.data.data;
+			// $scope.numbers = response.data.data.numbers;
+			// $scope.numbers.unshift(dataDefout);
+			
+		  }, function errorCallback(response) {
+			alert('er');
+		  });
+		// $scope.numbers.unshift({
+		// 	number:null,
+		// 	price:null,
+		// 	trans:null,
+		// 	rest:null,
+		// 	chanel:{},
+		// 	type:null,
+		// });
+		console.log($scope.numbers);
 	};
 
 	// $scope.handleValue= function(){

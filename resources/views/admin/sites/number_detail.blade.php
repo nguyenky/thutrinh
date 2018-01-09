@@ -16,13 +16,14 @@
                       </div>
                     </div>
                     <div class="card-header d-flex align-items-center">
-                      <ul class="nav nav-tabs my-customer-tabs">
-                        <li  ng-repeat="customer in customers" class="@{{active == customer.id ? 'active' :''}}" ng-click="changeActive(customer.id)">@{{customer.name}}</li>
+                      <div class="text-center" ng-show="!loading_customer">Đang Tải ... </div>
+                      <ul class="nav nav-tabs my-customer-tabs" ng-show="loading_customer">
+                        <li  ng-repeat="customer in customers" class="@{{active == customer.id ? 'active' :''}}" ng-click="selectCustomer(customer)">@{{customer.name}}</li>
                         <!-- <li class="active" ng-repeat="customer in customers">@{{customer.name}}</li> -->
                       </ul>
                     </div>
                     <div class="card-body">
-                      <table class="table">
+                      <table class="table" ng-show="selected">
                         <thead>
                           <tr width="100%">
                             <th class="text-center" width="10%">Số</th>
@@ -38,6 +39,7 @@
 
                           
                           <tr ng-repeat="number in numbers">
+                            @{{number}}
                             <th scope="row" class="text-center">
                               <input type="number" placeholder="Số" class="form-control" ng-model="number.number">
                             </th>
@@ -80,5 +82,8 @@
           </section>
 @endsection
 @section('javascript')
+  <script type="text/javascript">
+    var id_date = {{$date->id}};
+  </script>
   <script src="{{asset('angularjs/number.js')}}"></script>
 @endsection
